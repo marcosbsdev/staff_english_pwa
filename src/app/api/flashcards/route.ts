@@ -12,7 +12,13 @@ export async function GET() {
                 id: true,
                 term: true,
                 en_meaning: true,
+                en_dev_context: true,
+                en_professional_example: true,
+                en_pronunciation_tip: true,
                 pt_meaning: true,
+                pt_dev_context: true,
+                pt_professional_example: true,
+                pt_pronunciation_tip: true,
             },
         });
 

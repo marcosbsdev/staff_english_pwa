@@ -10,7 +10,13 @@ interface Flashcard {
     id: string;
     term: string;
     en_meaning: string;
+    en_dev_context: string;
+    en_professional_example: string;
+    en_pronunciation_tip: string;
     pt_meaning: string;
+    pt_dev_context: string;
+    pt_professional_example: string;
+    pt_pronunciation_tip: string;
 }
 
 export default function StudyPage() {
@@ -38,7 +44,7 @@ export default function StudyPage() {
         <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500/30">
             <Header />
 
-            <main className="max-w-xl mx-auto px-4 py-8 flex flex-col items-center">
+            <main className="max-w-xl mx-auto px-4 pt-24 pb-8 flex flex-col items-center">
 
                 <div className="w-full flex items-center justify-between mb-8">
                     <Link href="/" className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors">

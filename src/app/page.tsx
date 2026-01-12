@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import TextInput from "@/components/TextInput";
+import Link from "next/link";
+import { AcademicCapIcon } from "@heroicons/react/24/outline";
 import AnalysisCard from "@/components/AnalysisCard";
 
 export default function Home() {
@@ -61,6 +63,14 @@ export default function Home() {
           onAnalyze={handleAnalyze}
           isLoading={loading}
         />
+
+        <Link
+          href="/study"
+          className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 hover:from-cyan-500/20 hover:to-blue-500/20 border border-cyan-500/20 rounded-full text-cyan-600 dark:text-cyan-400 text-sm font-semibold transition-all group"
+        >
+          <AcademicCapIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+          Start Study Mode
+        </Link>
 
         {error && (
           <div className="w-full max-w-2xl p-4 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-2xl flex items-center gap-3 text-red-600 dark:text-red-400">
